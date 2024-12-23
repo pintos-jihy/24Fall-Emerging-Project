@@ -86,6 +86,7 @@ class PersonClassifier {
 
         val results = objectDetector?.detect(tensorImage)
         inferenceTime = SystemClock.uptimeMillis() - inferenceTime
+
         objectDetectorListener?.onObjectDetectionResults(
             results,
             inferenceTime,
